@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import zoramiLogo from '@/app/img/zorami.png'
-import { Search, Menu, X, Home, Film, Calendar, Star, Play, Grid3X3, Download, Zap, Clock, TrendingUp } from 'lucide-react'
+import { Search, Menu, X, Home, Film, Calendar, Star, Play, Grid3X3, Download, Zap, Clock, TrendingUp, Tag } from 'lucide-react'
 
 type NavbarProps = {
   forceSolid?: boolean
@@ -28,6 +28,7 @@ const Navbar = ({ forceSolid = false }: NavbarProps) => {
     { name: 'Terbaru', href: '/latest', icon: Zap },
     { name: 'Movie', href: '/movie', icon: Film },
     { name: 'Batch', href: '/batch', icon: Download },
+    { name: 'Genre', href: '/genres', icon: Tag },
     { name: 'All Anime', href: '/all', icon: Grid3X3 },
   ]
 
