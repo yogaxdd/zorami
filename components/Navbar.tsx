@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import zoramiLogo from '@/app/img/zorami.png'
 import { Search, Menu, X, Home, Film, Calendar, Star, Play, Grid3X3, Download, Zap, Clock, TrendingUp } from 'lucide-react'
 
 type NavbarProps = {
@@ -42,10 +44,17 @@ const Navbar = ({ forceSolid = false }: NavbarProps) => {
           {/* Logo */}
           <Link href="/" className="group flex items-center space-x-3">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-black text-xl">Z</span>
+              <div className="w-12 h-12 rounded-2xl overflow-hidden shadow-lg group-hover:scale-110 transition-transform duration-300 bg-black/20">
+                <Image
+                  src={zoramiLogo}
+                  alt="Zorami"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain p-1"
+                  priority
+                />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-blue-400 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+              <div className="absolute inset-0 rounded-2xl blur opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
             </div>
             <div className="hidden sm:block">
               <span className="text-2xl font-black bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">

@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   keywords: 'anime, streaming, watch anime, anime online, zorami, blue sky',
   authors: [{ name: 'Zorami Team' }],
   viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: '/img/zorami.ico',
+    shortcut: '/img/zorami.ico',
+    apple: '/img/zorami.png',
+  },
 }
 
 export default function RootLayout({
